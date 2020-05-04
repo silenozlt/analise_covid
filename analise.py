@@ -33,7 +33,7 @@ def main():
             st.markdown('Conhecendo as colunas do Dataset :')
             st.write(df.columns)
 
-
+#pq
 #teste
 
     if st.sidebar.button('Contatos'):
