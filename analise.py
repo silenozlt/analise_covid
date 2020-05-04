@@ -35,7 +35,7 @@ def main():
         #covid_cidade = covid.query("cidade=='Sabará'")
         cidade = st.sidebar.checkbox('Cidade')
         if cidade is not False:
-            covid_cidade =st.selectbox('Selecione a cidade para visualizar', list(covid.columns))
+            covid_cidade =st.selectbox('Selecione a cidade para visualizar', list(covid.cidade))
             covid_casos_cidade = covid_cidade[["data", "casos", "mortes"]]
             covid_casos_cidade.head()
 
