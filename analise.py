@@ -32,16 +32,9 @@ def main():
             st.markdown('Conhecendo as colunas do Dataset :')
             st.write(covid.columns)
 
-        #covid_cidade = covid.query("cidade=='Sabará'")
-        #cidade = st.text_input("Qual cidade deseja analisar ? ")
-        #if cidade is not False:
-        city = 'Sabará'
-        city = st.selectbox('Selecione a cidade para visualizar', list(covid.cidade))
-        covid_cidade = covid.query("cidade== city")
+        covid_cidade = covid.query("cidade=='Sabará'")
         covid_casos_cidade = covid_cidade[["data", "casos", "mortes"]]
-        covid_casos_cidade.head()
-
-            #covid[covid['cidade']==city]['casos']
+        st.table(covid_casos_cidade.head())
 
 
 
