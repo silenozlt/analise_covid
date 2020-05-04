@@ -33,21 +33,6 @@ def main():
             st.markdown('Conhecendo as colunas do Dataset :')
             st.write(df.columns)
 
-        tips_var = st.sidebar.checkbox('Tipo de variaveis no Dataset')
-        if tips_var is not False:
-            st.markdown('Tipos de variaveis :')
-            st.write(df.dtypes)
-
-        descricao = st.sidebar.checkbox('Descrição do dataset')
-        if descricao is not False:
-            st.markdown('Describe :')
-            st.write(df.describe())
-
-        desvio_padrao = st.sidebar.checkbox('Descrição de variaveis')
-        if desvio_padrao is not False:
-            st.markdown('Describe :')
-            selecao = st.multiselect('Selecione a(s) variaveis : ', list(df.columns), default=str(df.columns[1]))
-            st.write(df[selecao].describe())
 
 #teste
 
