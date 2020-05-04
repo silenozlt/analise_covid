@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import altair as alt
 
-
+#ufa
 
 def main():
     st.title('Analisando Dados Covid19')
