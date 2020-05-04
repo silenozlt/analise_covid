@@ -5,7 +5,7 @@ import pandas as pd
 
 def main():
     st.title('Analisando Dados Covid19')
-    st.image('imagens/python.png')
+   #st.image('imagens/python.png')
     file = st.file_uploader('Choose your file :', type='csv')
     if file is not None:
         st.success('Carregado com sucesso !')
