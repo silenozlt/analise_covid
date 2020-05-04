@@ -32,12 +32,14 @@ def main():
             st.markdown('Conhecendo as colunas do Dataset :')
             st.write(covid.columns)
 
+        st.subheader('Buscando dados por cidade')
         covid_cidade = covid.query("cidade=='Sabará'")
         covid_casos_cidade = covid_cidade[["data", "casos", "mortes"]]
         st.table(covid_casos_cidade.head())
 
-
-
+        #plotando grafico
+        #covid_casos_cidade = covid_casos_cidade.sort_values(by="data")
+        #covid_casos_cidade.plot.area(x="data", y=["mortes", "casos"], figsize=(15, 10), title="Covid Sabará", grid=True)
 
 
 
