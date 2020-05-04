@@ -25,15 +25,13 @@ def main():
         linhas = st.sidebar.checkbox('Linhas do dataset : ')
         if linhas is not False:
             st.markdown('Quantidade de linhas: ')
-            st.write(len(df))
+            st.write(len(covid))
 
         colunas = st.sidebar.checkbox('Colunas')
         if colunas is not False:
             st.markdown('Conhecendo as colunas do Dataset :')
-            st.write(df.columns)
+            st.write(covid.columns)
 
-#pq
-#teste
 
     if st.sidebar.button('Contatos'):
         st.write('GitHub: https://github.com/silenozlt')
