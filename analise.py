@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
-#
+import matplotlib.pyplot as plt
+import plotly.express as px
+import altair as alt
+
 
 
 def main():
@@ -38,9 +41,9 @@ def main():
         st.table(covid_casos_cidade.head())
 
         #plotando grafico
-        #covid_casos_cidade = covid_casos_cidade.sort_values(by="data")
-        #covid_casos_cidade.plot.area(x="data", y=["mortes", "casos"], figsize=(15, 10), title="Covid Sabará", grid=True)
-
+        covid_casos_cidade = covid_casos_cidade.sort_values(by="data")
+        covid_casos_cidade.plot.area(x="data", y=["mortes", "casos"], figsize=(15, 10), title="Covid Sabará", grid=True)
+        st.pyplot(covid_cidade)
 
 
     #if st.sidebar.button('Contatos'):
