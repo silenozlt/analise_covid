@@ -39,11 +39,13 @@ def main():
 
 
 
-    if st.sidebar.button('Contatos'):
-        st.write('GitHub: https://github.com/silenozlt')
-        st.write(('linkedin : https://www.linkedin.com/in/cassio-placido-4a950261/'))
-    else:
-        st.text(' ')
+
+
+    #if st.sidebar.button('Contatos'):
+        st.text('GitHub: https://github.com/silenozlt')
+        st.text('linkedin : https://www.linkedin.com/in/cassio-placido-4a950261/')
+    #else:
+    #    st.text(' ')
 
 
 if __name__ == '__main__':
