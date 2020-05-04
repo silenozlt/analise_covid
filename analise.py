@@ -44,8 +44,8 @@ def main():
 
 
     #if st.sidebar.button('Contatos'):
-        st.text('GitHub: https://github.com/silenozlt')
-        st.text('linkedin : https://www.linkedin.com/in/cassio-placido-4a950261/')
+    st.text('GitHub: https://github.com/silenozlt')
+    st.text('linkedin : https://www.linkedin.com/in/cassio-placido-4a950261/')
     #else:
     #    st.text(' ')
 
