@@ -33,11 +33,15 @@ def main():
             st.write(covid.columns)
 
         #covid_cidade = covid.query("cidade=='Sabará'")
-        cidade = st.text_input("Qual cidade deseja analisar ? ")
-        if cidade is not False:
-            covid_cidade =st.selectbox('Selecione a cidade para visualizar', list(covid.cidade))
+        #cidade = st.text_input("Qual cidade deseja analisar ? ")
+        #if cidade is not False:
+            city = st.selectbox('Selecione a cidade para visualizar', list(covid.cidade))
+            covid_cidade = covid.query("cidade== city")
             covid_casos_cidade = covid_cidade[["data", "casos", "mortes"]]
             covid_casos_cidade.head()
+
+            #covid[covid['cidade']==city]['casos']
+
 
 
 
