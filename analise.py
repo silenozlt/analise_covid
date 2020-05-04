@@ -32,6 +32,12 @@ def main():
             st.markdown('Conhecendo as colunas do Dataset :')
             st.write(covid.columns)
 
+        #covid_cidade = covid.query("cidade=='Sabará'")
+        covid_cidade =st.selectbox('Selecione a cidade para visualizar', list(covid.columns))
+        covid_casos_cidade = covid_cidade[["data", "casos", "mortes"]]
+        covid_casos_cidade.head()
+
+
 
     if st.sidebar.button('Contatos'):
         st.write('GitHub: https://github.com/silenozlt')
