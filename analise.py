@@ -1,8 +1,5 @@
-import streamlit as st
 import pandas as pd
-import plotly.express as px
-import altair as alt
-
+import streamlit as st
 
 
 def main():
@@ -42,7 +39,8 @@ def main():
         # plotando grafico
         covid_casos_cidade = covid_casos_cidade.sort_values(by="data")
         covid_casos_cidade.plot.area(x="data", y=["mortes", "casos"], figsize=(15, 10), title="Covid Sabará", grid=True)
-        st.pyplot(covid_cidade)
+        st.pyplot_chart(covid_cidade)
+        #st.pyplot(covid_cidade)
 
     # if st.sidebar.button('Contatos'):
     st.text('GitHub: https://github.com/silenozlt')
